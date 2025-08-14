@@ -1,0 +1,24 @@
+provider "aws" {
+  region = local.region
+}
+
+terraform {
+  required_version = ">= 1.3.0"
+
+  required_providers {      # change and adding helm, kubernetes and aws provider
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+
+    helm = {
+      source  = "hashicorp/helm"
+      version = ">= 2.0.0"
+    }
+
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = ">= 2.20.0"
+    }
+  }
+}
