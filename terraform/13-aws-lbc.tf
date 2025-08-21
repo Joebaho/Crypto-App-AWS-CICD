@@ -44,7 +44,7 @@ resource "helm_release" "aws_lbc" {
   namespace  = "kube-system"
   version    = "1.7.2"
 
-  set = [   # change or add equal sign then create the list of the set
+  set = [ # change or add equal sign then create the list of the set
     {
       name  = "clusterName"
       value = aws_eks_cluster.eks.name

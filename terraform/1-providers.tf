@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   required_version = ">= 1.3.0"
 
-  required_providers {      # change and adding helm, kubernetes and aws provider
+  required_providers { # change and adding helm, kubernetes and aws provider
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.0"

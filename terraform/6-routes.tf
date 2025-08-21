@@ -25,8 +25,8 @@ resource "aws_route_table" "public" {
 }
 
 resource "aws_route_table_association" "private_zone1" {
-  subnet_id       = aws_subnet.private_zone1.id
-  route_table_id  = aws_route_table.private.id
+  subnet_id      = aws_subnet.private_zone1.id
+  route_table_id = aws_route_table.private.id
 }
 
 resource "aws_route_table_association" "private_zone2" {
